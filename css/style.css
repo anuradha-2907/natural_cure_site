@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #f2f2f2;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+header .logo{
+    height: 60px;
+    line-height: 60px;
+    top: 0;
+    right: 0;
+    color: #12334e;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    padding-left: 20px;
+}
+header #toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #9051ff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #toggle::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+header #toggle::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(5px);
+    transition: 0.2s;
+}
+header #toggle.active::before{
+    transform: translateY(-5px) rotate(45deg);
+}
+header #toggle.active::after{
+    transform: translateY(-5px) rotate(-45deg);
+}
+header #toggle.active{
+    background-color: #f7226a;
+}
+#navbar{
+    position: relative;
+    height: 60px;
+    right: 60px;
+    background-color: #fff;
+    transition: 0.6s;
+    width: 0;
+    overflow: hidden;
+}
+#navbar.active{
+    width: 550px;
+    right: 60px;
+}
+#navbar ul{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+#navbar ul li{
+    list-style: none;
+}
+#navbar ul li a{
+    color: #12334e;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0px 15px;
+    letter-spacing: 2px;
+}
+#navbar ul li a:hover{
+    color: #fff;
+    background-color: #9051ff;
+}
+@media(max-width:750px){
+    #navbar{
+        height: 100%;
+        top: 60px;
+        right: 0;
+        position: fixed;
+    }
+    #navbar.active{
+        width: 100%;
+        right: 0;
+    }
+    #navbar ul{
+        display: block;
+    }
+}
+.banner{
+    background-image: url(../images/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    z-index: -1;
+}
+.overlap{
+    background: rgba(0,0,0,0.25);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    z-index: -1;
+}
+.overlap h1{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+.overlap a{
+    display: block;
+}
+@media(max-width:600px){
+    .overlap h1{
+        font-size: 30px;
+    }
+}
+.section{
+	width: 100%;
+	min-height: 70vh;
+	background-color: #ddd;
+}
+.about .container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 100px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#9051ff;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #9051ff;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #f7226a;
+	color:#fff;
+}
+@media screen and (max-width: 768px){
+	.about .container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+.content-section .social{
+	text-align: center;
+}
+
+}
+
+.services .container{
+    padding:15px 9%;
+    padding-bottom: 100px;
+}
+
+.services .container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color:#f7226a;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 50px;
+}
+
+.services .container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap:15px;
+}
+
+.services .container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding:30px 20px;
+}
+
+.services .container .box-container .box img{
+    height: 80px;
+}
+
+.services .container .box-container .box h3{
+    color:#9051ff;
+    font-size: 22px;
+    padding:10px 0;
+}
+
+.services .container .box-container .box p{
+    color:#777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.services .container .box-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background:#9051ff;
+    color:#fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    text-decoration: none;
+}
+
+.services .container .box-container .box .btn:hover{
+    letter-spacing: 1px;
+    background: #f7226a;
+}
+
+.services .container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+    .services .container{
+        padding:20px;
+    }
+}
+.main{
+    padding-top: 100px;
+}
+.main.home{
+    padding: 0;
+}
